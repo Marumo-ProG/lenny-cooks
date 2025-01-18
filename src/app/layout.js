@@ -1,6 +1,12 @@
 // MUI configure
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
+// MUI
+import Stack from "@mui/material/Stack";
+
+// Containers
+import NavBar from "@/common/layout/containers/NavBar";
+
 // Theme
 import ThemeContext from "@/common/theme";
 import theme from "@/common/theme";
@@ -15,7 +21,12 @@ export default function RootLayout({ children }) {
         <html lang="en">
             <body>
                 <AppRouterCacheProvider>
-                    <ThemeContext theme={theme}>{children}</ThemeContext>
+                    <ThemeContext theme={theme}>
+                        <Stack>
+                            <NavBar />
+                            {children}
+                        </Stack>
+                    </ThemeContext>
                 </AppRouterCacheProvider>
             </body>
         </html>

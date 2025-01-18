@@ -21,6 +21,11 @@ const roboto = Roboto({
 const theme = createTheme({
     typography: {
         fontFamily: roboto.style.fontFamily, // Default font family
+        link: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "18px",
+            color: Colors.link,
+        },
         miniTitle: {
             fontFamily: merriweather.style.fontFamily,
             fontSize: "24px",
