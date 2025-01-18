@@ -1,17 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
-
 // MUI configure
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v15-appRouter";
 
-const geistSans = Geist({
-    variable: "--font-geist-sans",
-    subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-    variable: "--font-geist-mono",
-    subsets: ["latin"],
-});
+// Theme
+import ThemeContext from "@/common/theme";
+import theme from "@/common/theme";
 
 export const metadata = {
     title: "Create Next App",
@@ -21,8 +13,10 @@ export const metadata = {
 export default function RootLayout({ children }) {
     return (
         <html lang="en">
-            <body className={`${geistSans.variable} ${geistMono.variable}`}>
-                <AppRouterCacheProvider>{children}</AppRouterCacheProvider>
+            <body>
+                <AppRouterCacheProvider>
+                    <ThemeContext theme={theme}>{children}</ThemeContext>
+                </AppRouterCacheProvider>
             </body>
         </html>
     );
