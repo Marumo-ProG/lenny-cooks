@@ -7,6 +7,7 @@ export const Colors = {
     greyDark: "#434343",
     greyLight: "#544B44",
     link: "#605C59",
+    background: "#F5F5F5",
 };
 
 export const PageGutter = "10%";

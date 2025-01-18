@@ -26,6 +26,11 @@ const theme = createTheme({
             fontSize: "18px",
             color: Colors.link,
         },
+        footerLink: {
+            fontFamily: merriweather.style.fontFamily,
+            fontSize: "14px",
+            color: Colors.greyLight,
+        },
         miniTitle: {
             fontFamily: merriweather.style.fontFamily,
             fontSize: "24px",
