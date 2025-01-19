@@ -26,9 +26,9 @@ const SubscribeSection = () => {
         console.log(data);
     };
     return (
-        <Stack px={PageGutter} direction={"row"} spacing={10}>
+        <Stack px={PageGutter} direction={{ xs: "column", md: "row" }} spacing={10}>
             <Stack
-                width="100%"
+                width={{ xs: "auto", md: "100%" }}
                 sx={{ backgroundColor: Colors.tag, borderRadius: "5px", p: 4 }}
                 alignItems={"center"}
                 spacing={2}
