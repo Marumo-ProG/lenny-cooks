@@ -24,7 +24,7 @@ export default function RootLayout({ children }) {
             <body>
                 <AppRouterCacheProvider>
                     <ThemeContext theme={theme}>
-                        <Stack>
+                        <Stack spacing={5}>
                             <NavBar />
                             {children}
                             <SubscribeSection />
