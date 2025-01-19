@@ -19,8 +19,27 @@ const roboto = Roboto({
 });
 
 const theme = createTheme({
+    components: {
+        MuiChip: {
+            styleOverrides: {
+                root: {
+                    backgroundColor: Colors.tag,
+                    borderRadius: "3px",
+                    width: "fit-content",
+                    padding: "2px 4px",
+                    color: Colors.white,
+                    fontSize: "14px",
+                },
+            },
+        },
+    },
     typography: {
         fontFamily: roboto.style.fontFamily, // Default font family
+        body: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "16px",
+            color: Colors.greyDark,
+        },
         link: {
             fontFamily: roboto.style.fontFamily,
             fontSize: "18px",

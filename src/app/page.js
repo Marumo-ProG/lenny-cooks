@@ -5,6 +5,9 @@ import Typography from "@mui/material/Typography";
 // Components
 import SearchBlogComponent from "./components/SearchBlogComponent";
 
+// Containers
+import BlogList from "./containers/BlogList";
+
 // Utils
 import { Colors, PageGutter } from "@/common/constants";
 
@@ -30,6 +33,7 @@ const Landing = () => {
                 <Stack sx={{ width: "50%" }}>
                     <SearchBlogComponent />
                 </Stack>
+                <BlogList />
             </Stack>
         </Stack>
     );
