@@ -15,11 +15,18 @@ import { PageGutter, Colors } from "@/common/constants";
 const SubscribeSection = () => {
     const { control, handleSubmit } = useForm();
 
+    const popularPosts = [
+        "The Best Way to Cook Bacon",
+        "How to Make the Perfect Pancakes",
+        "5 Delicious Breakfast Ideas",
+    ];
+    const recentPosts = [];
+
     const handleOnSubmit = (data) => {
         console.log(data);
     };
     return (
-        <Stack px={PageGutter} direction={"row"} spacing={10} alignItems={"center"}>
+        <Stack px={PageGutter} direction={"row"} spacing={10}>
             <Stack
                 width="100%"
                 sx={{ backgroundColor: Colors.tag, borderRadius: "5px", p: 4 }}
@@ -67,8 +74,43 @@ const SubscribeSection = () => {
                     </Stack>
                 </form>
             </Stack>
-            <Stack width="100%"></Stack>
-            <Stack width="100%"></Stack>
+            <Stack width="100%" justifyContent={"start"} spacing={3}>
+                {popularPosts.length > 0 && (
+                    <>
+                        <Typography variant="body1">POPULAR POSTS</Typography>
+                        <Stack spacing={2}>
+                            {popularPosts.map((post, index) => (
+                                <Typography
+                                    key={index}
+                                    variant="footerLink"
+                                    sx={{ color: Colors.black, fontWeight: 400 }}
+                                >
+                                    {post}
+                                </Typography>
+                            ))}
+                        </Stack>
+                    </>
+                )}
+            </Stack>
+
+            <Stack width="100%" spacing={3}>
+                {recentPosts.length > 0 && (
+                    <>
+                        <Typography variant="body1">RECENT POSTS</Typography>
+                        <Stack spacing={2}>
+                            {recentPosts.map((post, index) => (
+                                <Typography
+                                    key={index}
+                                    variant="footerLink"
+                                    sx={{ color: Colors.black, fontWeight: 400 }}
+                                >
+                                    {post}
+                                </Typography>
+                            ))}
+                        </Stack>
+                    </>
+                )}
+            </Stack>
         </Stack>
     );
 };
