@@ -1,6 +1,8 @@
 // next components
-import Link from "next/link";
 import Image from "next/image";
+
+// Date
+import { format } from "date-fns";
 
 // MUI
 import Typography from "@mui/material/Typography";
@@ -42,7 +44,7 @@ const BlogCard = ({ blog }) => {
                             {blog.title}
                         </Typography>
                         <Typography variant="footerLink" sx={{}}>
-                            {blog.date} • {blog.readTime}
+                            {format(new Date(blog.date), "MMM d, yyyy")} • {blog.readTime}
                         </Typography>
                     </Stack>
                     <Stack spacing={3}>

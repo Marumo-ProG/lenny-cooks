@@ -4,7 +4,7 @@
 import { useForm, Controller } from "react-hook-form";
 
 // Utils
-import { PageGutter, Colors } from "@/common/constants";
+import { Colors } from "@/common/constants";
 
 // MUI
 import TextField from "@mui/material/TextField";
