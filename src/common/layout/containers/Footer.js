@@ -27,7 +27,7 @@ export default function Footer() {
                 </LinkText>
             </Stack>
             <Typography variant="footerLink" sx={{ textAlign: "center" }}>
-                Copyright © 2021 Food Ninja Blog. All Rights Reserved.
+                Copyright © 2025 Lenny Cooks Blog. All Rights Reserved.
             </Typography>
         </Stack>
     );

@@ -7,6 +7,7 @@ import Stack from "@mui/material/Stack";
 // Containers
 import NavBar from "@/common/layout/containers/NavBar";
 import Footer from "@/common/layout/containers/Footer";
+import SubscribeSection from "@/common/layout/containers/SubscribeSection";
 
 // Theme
 import ThemeContext from "@/common/theme";
@@ -26,6 +27,7 @@ export default function RootLayout({ children }) {
                         <Stack>
                             <NavBar />
                             {children}
+                            <SubscribeSection />
                             <Footer />
                         </Stack>
                     </ThemeContext>
