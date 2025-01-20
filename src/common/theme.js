@@ -61,6 +61,12 @@ const theme = createTheme({
             fontSize: "48px",
             color: Colors.title,
         },
+        secondaryTitle: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "26px",
+            color: Colors.greyDark,
+            fontWeight: "medium",
+        },
     },
 });
 
