@@ -67,6 +67,18 @@ const theme = createTheme({
             color: Colors.greyDark,
             fontWeight: "medium",
         },
+        content: {
+            fontFamily: merriweather.style.fontFamily,
+            fontSize: "18px",
+            color: Colors.content,
+            fontWeight: 400,
+        },
+        li: {
+            fontFamily: merriweather.style.fontFamily,
+            fontSize: "18px",
+            color: Colors.content,
+            fontWeight: 400,
+        },
     },
 });
 

@@ -9,6 +9,9 @@ import Typography from "@mui/material/Typography";
 import Stack from "@mui/material/Stack";
 import Chip from "@mui/material/Chip";
 
+// Components
+import ContentsBlock from "./component/ContentsBlock";
+
 // Utils
 import { Colors, PageGutter } from "@/common/constants";
 
@@ -31,9 +34,18 @@ const Blog = () => {
             image: AvatarTestImage,
         },
         contents: [
-            "How to travel without spending a dime",
-            "Get the most out of your credit card reward points",
-            "Why you don’t need more than 3 pieces of clothing",
+            {
+                title: "How to travel without spending a dime",
+                link: "#how-to-travel-without-spending",
+            },
+            {
+                title: "Get the most out of your credit card reward points",
+                link: "#get-most-credit",
+            },
+            {
+                title: "Why you don’t need more than 3 pieces of clothing",
+                link: "#why-you-dont-need-3-piece-clothing",
+            },
         ],
         sections: [
             {
@@ -44,7 +56,7 @@ const Blog = () => {
         ],
     };
     return (
-        <Stack spacing={2} sx={{ px: PageGutter }}>
+        <Stack spacing={2} alignSelf={"center"} sx={{ px: PageGutter, maxWidth: "800px" }}>
             <Chip label={blog.category} />
             <Stack>
                 <Typography variant="bigTitle" sx={{ color: Colors.black }}>
@@ -90,6 +102,8 @@ const Blog = () => {
                         </Typography>
                     </Stack>
                 ))}
+
+                <ContentsBlock items={blog.contents} />
             </Stack>
         </Stack>
     );

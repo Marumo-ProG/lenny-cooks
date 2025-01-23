@@ -9,6 +9,7 @@ export const Colors = {
     link: "#605C59",
     background: "#F5F5F5",
     white: "#FFFFFF",
+    content: "#303030",
 };
 
 export const PageGutter = "10%";
