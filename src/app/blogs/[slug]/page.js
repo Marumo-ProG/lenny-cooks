@@ -12,6 +12,7 @@ import Chip from "@mui/material/Chip";
 // Components
 import ContentsBlock from "./component/ContentsBlock";
 import BlogContentPart from "./component/BlogContentPart";
+import KeepReadingList from "./component/KeepReadingList";
 
 // Utils
 import { Colors, PageGutter } from "@/common/constants";
@@ -75,6 +76,22 @@ const Blog = () => {
                     "<p>Massa, libero morbi morbi sed non sed. In et neque lectus ultricies leo eros. Auctor in elementum accumsan malesuada gravida neque cursus pellentesque nunc. Dui nullam odio neque varius massa praesent. Neque, porta vel, morbi nulla at tincidunt. Neque, et ultrices duis fermentum, tincidunt sem sed. Erat accumsan dui enim nisl morbi feugiat.</p>",
             },
         ],
+        keep_reading: [
+            {
+                image: TestImage,
+                link: "blogs/why-you-dont-need-more",
+                title: "Why you don’t need more than 3 pieces of clothing",
+                subtitle:
+                    "Et vitae, mollis euismod lobortis blandit amet sed amet. Amet ut amet nisl tortor arcu non id nulla mauris neque nisl magna.",
+            },
+            {
+                image: TestImage,
+                link: "blogs/why-you-dont-more",
+                title: "Why you don’t need more than 3 pieces of clothing",
+                subtitle:
+                    "Et vitae, mollis euismod lobortis blandit amet sed amet. Amet ut amet nisl tortor arcu non id nulla mauris neque nisl magna.",
+            },
+        ],
     };
     return (
         <Stack spacing={2} alignSelf={"center"} sx={{ px: PageGutter, maxWidth: "800px" }}>
@@ -131,6 +148,8 @@ const Blog = () => {
                 {blog.parts.map((part, index) => (
                     <BlogContentPart key={index} part={part} />
                 ))}
+
+                <KeepReadingList blogs={blog.keep_reading} />
             </Stack>
         </Stack>
     );
