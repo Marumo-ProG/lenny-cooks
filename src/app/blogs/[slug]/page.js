@@ -11,6 +11,7 @@ import Chip from "@mui/material/Chip";
 
 // Components
 import ContentsBlock from "./component/ContentsBlock";
+import BlogContentPart from "./component/BlogContentPart";
 
 // Utils
 import { Colors, PageGutter } from "@/common/constants";
@@ -33,25 +34,45 @@ const Blog = () => {
             name: "Lenny, the cook",
             image: AvatarTestImage,
         },
-        contents: [
-            {
-                title: "How to travel without spending a dime",
-                link: "#how-to-travel-without-spending",
-            },
-            {
-                title: "Get the most out of your credit card reward points",
-                link: "#get-most-credit",
-            },
-            {
-                title: "Why you don’t need more than 3 pieces of clothing",
-                link: "#why-you-dont-need-3-piece-clothing",
-            },
-        ],
+        // contents: [
+        //     {
+        //         title: "How to travel without spending a dime",
+        //         link: "#how-to-travel-without-spending",
+        //     },
+        //     {
+        //         title: "Get the most out of your credit card reward points",
+        //         link: "#get-most-credit",
+        //     },
+        //     {
+        //         title: "Why you don’t need more than 3 pieces of clothing",
+        //         link: "#why-you-dont-need-3-piece-clothing",
+        //     },
+        // ],
         sections: [
             {
                 titleVariant: "secondaryTitle",
                 title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare nulla risus id fames nascetur urna. Eros in neque tincidunt.",
                 text: "Vel leo proin facilisis metus sit ut cursus sagittis. Diam donec mus malesuada et ac vulputate. Aenean lacinia suspendisse et mattis adipiscing id dictum commodo nunc. Feugiat lorem cras ut cras enim neque, elit, facilisi habitasse. Facilisis faucibus nunc congue urna diam. Vitae, diam justo, massa, elit. In et nibh ut in diam tellus at tellus diam.",
+            },
+        ],
+        parts: [
+            {
+                id: "#how-to-travel-without-spending",
+                title: "How to travel without spending a dime",
+                content:
+                    "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ultrices dui diam arcu pharetra at laoreet pellentesque. Imperdiet sit ut ornare nulla risus id fames nascetur urna. Eros in neque tincidunt.</p>",
+            },
+            {
+                id: "#get-most-credit",
+                title: "Get the most out of your credit card reward points",
+                content:
+                    "<p>Massa, libero morbi morbi sed non sed. In et neque lectus ultricies leo eros. Auctor in elementum accumsan malesuada gravida neque cursus pellentesque nunc. Dui nullam odio neque varius massa praesent. Neque, porta vel, morbi nulla at tincidunt. Neque, et ultrices duis fermentum, tincidunt sem sed. Erat accumsan dui enim nisl morbi feugiat.</p>",
+            },
+            {
+                id: "#why-you-dont-need-3-piece-clothing",
+                title: "Why you don’t need more than 3 pieces of clothing",
+                content:
+                    "<p>Massa, libero morbi morbi sed non sed. In et neque lectus ultricies leo eros. Auctor in elementum accumsan malesuada gravida neque cursus pellentesque nunc. Dui nullam odio neque varius massa praesent. Neque, porta vel, morbi nulla at tincidunt. Neque, et ultrices duis fermentum, tincidunt sem sed. Erat accumsan dui enim nisl morbi feugiat.</p>",
             },
         ],
     };
@@ -97,13 +118,19 @@ const Blog = () => {
                 {blog.sections.map((section, index) => (
                     <Stack key={index} spacing={2}>
                         <Typography variant={section.titleVariant}>{section.title}</Typography>
-                        <Typography variant="h6" sx={{ fontWeight: 400, Color: Colors.greyDark }}>
-                            {section.text}
-                        </Typography>
+                        <Typography variant="blogText">{section.text}</Typography>
                     </Stack>
                 ))}
-
-                <ContentsBlock items={blog.contents} />
+                <ContentsBlock items={blog.parts} />
+                <Typography variant="blogText">
+                    Amet aliquet at a aliquam ac suspendisse euismod. Lectus sit in ut erat in. Et
+                    nulla a magna amet, amet. Sodales malesuada laoreet bibendum neque amet turpis
+                    non. Ac arcu lacus turpis elementum imperdiet. Euismod purus, libero scelerisque
+                    vitae, libero fermentum urna, nunc.
+                </Typography>
+                {blog.parts.map((part, index) => (
+                    <BlogContentPart key={index} part={part} />
+                ))}
             </Stack>
         </Stack>
     );

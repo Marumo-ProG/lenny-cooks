@@ -17,7 +17,7 @@ const ContentsBlock = ({ items }) => {
             <Typography variant="miniTitle">In this article</Typography>
 
             {items.map((item, index) => (
-                <LinkText href={item.link} key={index}>
+                <LinkText href={item.id} key={index}>
                     <Typography variant="content">
                         {index + 1}. {item.title}
                     </Typography>

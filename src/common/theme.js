@@ -73,10 +73,10 @@ const theme = createTheme({
             color: Colors.content,
             fontWeight: 400,
         },
-        li: {
-            fontFamily: merriweather.style.fontFamily,
-            fontSize: "18px",
-            color: Colors.content,
+        blogText: {
+            fontFamily: roboto.style.fontFamily,
+            fontSize: "20px",
+            color: Colors.greyDark,
             fontWeight: 400,
         },
     },
