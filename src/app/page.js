@@ -3,10 +3,7 @@ import Stack from "@mui/material/Stack";
 import Typography from "@mui/material/Typography";
 
 // Components
-import SearchBlogComponent from "./components/SearchBlogComponent";
-
-// Containers
-import BlogList from "./containers/BlogList";
+import Filters from "./components/Filters";
 
 // Utils
 import { Colors, PageGutter } from "@/common/constants";
@@ -30,10 +27,9 @@ const Landing = () => {
                         A blog about food, experiences, and recipes.
                     </Typography>
                 </Stack>
-                <Stack sx={{ width: "50%" }}>
-                    <SearchBlogComponent />
+                <Stack width={"100%"}>
+                    <Filters />
                 </Stack>
-                <BlogList />
             </Stack>
         </Stack>
     );

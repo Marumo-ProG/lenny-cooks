@@ -35,20 +35,6 @@ const Blog = () => {
             name: "Lenny, the cook",
             image: AvatarTestImage,
         },
-        // contents: [
-        //     {
-        //         title: "How to travel without spending a dime",
-        //         link: "#how-to-travel-without-spending",
-        //     },
-        //     {
-        //         title: "Get the most out of your credit card reward points",
-        //         link: "#get-most-credit",
-        //     },
-        //     {
-        //         title: "Why you don’t need more than 3 pieces of clothing",
-        //         link: "#why-you-dont-need-3-piece-clothing",
-        //     },
-        // ],
         sections: [
             {
                 titleVariant: "secondaryTitle",
