@@ -28,7 +28,7 @@ const Landing = () => {
                     </Typography>
                 </Stack>
                 <Stack width={"100%"}>
-                    <Filters />
+                    <Filters justSearch />
                 </Stack>
             </Stack>
         </Stack>
