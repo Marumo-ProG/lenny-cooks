@@ -6,8 +6,6 @@ import Select from "@mui/material/Select";
 import FormControl from "@mui/material/FormControl";
 import InputLabel from "@mui/material/InputLabel";
 
-// Utils
-
 const FilterByCategory = ({ setFilters, filters }) => {
     return (
         <FormControl fullWidth>
